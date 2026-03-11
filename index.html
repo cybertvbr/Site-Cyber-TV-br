@@ -1,0 +1,152 @@
+export default function CyberTVBRSite() { return ( <div className="min-h-screen bg-neutral-950 text-white"> <section className="relative overflow-hidden"> <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-transparent to-yellow-400/10" /> <div className="absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-orange-500/20 blur-3xl" />
+
+<div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+      <div className="grid items-center gap-12 lg:grid-cols-2">
+        <div>
+          <div className="mb-6 inline-flex items-center rounded-full border border-orange-400/30 bg-orange-500/10 px-4 py-2 text-sm text-orange-300">
+            Streaming sem limites
+          </div>
+          <h1 className="text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
+            Cyber <span className="text-orange-400">TV BR</span>
+          </h1>
+          <p className="mt-6 max-w-xl text-lg text-neutral-300 sm:text-xl">
+            Todos os canais, filmes e séries em um só lugar. Experimente uma plataforma moderna,
+            rápida e feita para quem quer entretenimento completo.
+          </p>
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="#teste"
+              className="rounded-2xl bg-orange-500 px-6 py-4 text-center font-semibold text-black shadow-lg shadow-orange-500/30 transition hover:scale-[1.02]"
+            >
+              Teste grátis 3 horas
+            </a>
+            <a
+              href="#beneficios"
+              className="rounded-2xl border border-white/15 bg-white/5 px-6 py-4 text-center font-semibold transition hover:bg-white/10"
+            >
+              Ver benefícios
+            </a>
+          </div>
+          <div className="mt-8 grid max-w-xl grid-cols-3 gap-4 text-sm text-neutral-300">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div className="text-2xl font-bold text-orange-400">24h</div>
+              <div>Conteúdo disponível</div>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div className="text-2xl font-bold text-orange-400">3h</div>
+              <div>Teste grátis</div>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div className="text-2xl font-bold text-orange-400">1 mês</div>
+              <div>Por indicação</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative">
+          <div className="rounded-[32px] border border-orange-400/20 bg-white/5 p-4 shadow-2xl shadow-orange-500/10 backdrop-blur">
+            <div className="rounded-[28px] border border-white/10 bg-neutral-900 p-5">
+              <div className="mb-4 flex items-center justify-between">
+                <div>
+                  <p className="text-sm text-neutral-400">Plataforma</p>
+                  <h3 className="text-xl font-bold">Cyber TV BR</h3>
+                </div>
+                <div className="rounded-full bg-orange-500 px-3 py-1 text-sm font-bold text-black">AO VIVO</div>
+              </div>
+
+              <div className="grid grid-cols-3 gap-3">
+                {['TV ao Vivo', 'Filmes', 'Séries', 'Infantil', 'Esportes', 'Novelas'].map((item) => (
+                  <div key={item} className="rounded-2xl border border-white/10 bg-neutral-800 p-3 text-center text-sm font-medium text-neutral-200">
+                    {item}
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
+                {[1, 2, 3, 4, 5, 6].map((card) => (
+                  <div key={card} className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-orange-500/40 via-orange-400/10 to-neutral-800 p-3">
+                    <div className="flex h-full items-end rounded-xl border border-white/10 bg-black/30 p-3 text-sm font-semibold text-white">
+                      Destaque {card}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="beneficios" className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+    <div className="mb-10 text-center">
+      <p className="text-sm font-semibold uppercase tracking-[0.25em] text-orange-400">Benefícios</p>
+      <h2 className="mt-3 text-3xl font-black sm:text-4xl">Tudo o que você precisa em um só lugar</h2>
+    </div>
+
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      {[
+        ['Todos os canais', 'Acesse uma programação completa com muito mais praticidade.'],
+        ['Filmes e séries', 'Encontre entretenimento para toda a família em um só sistema.'],
+        ['Compatível com vários dispositivos', 'Use na Smart TV, celular, tablet e outros aparelhos.'],
+        ['Interface moderna', 'Navegação rápida, simples e intuitiva para assistir sem complicação.'],
+      ].map(([title, desc]) => (
+        <div key={title} className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/20">
+          <div className="mb-4 h-12 w-12 rounded-2xl bg-orange-500/15" />
+          <h3 className="text-xl font-bold">{title}</h3>
+          <p className="mt-3 text-neutral-300">{desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section className="border-y border-white/10 bg-white/5">
+    <div className="mx-auto grid max-w-7xl gap-8 px-6 py-16 lg:grid-cols-2 lg:px-8">
+      <div className="rounded-3xl border border-white/10 bg-neutral-900 p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-orange-400">Teste grátis</p>
+        <h2 className="mt-3 text-3xl font-black">Experimente por 3 horas</h2>
+        <p className="mt-4 text-neutral-300">
+          Conheça a plataforma antes de assinar. Veja a qualidade, a navegação e tudo o que a Cyber TV BR oferece.
+        </p>
+      </div>
+
+      <div className="rounded-3xl border border-orange-400/20 bg-gradient-to-br from-orange-500/15 to-neutral-900 p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-orange-300">Indique e ganhe</p>
+        <h2 className="mt-3 text-3xl font-black">1 mês grátis por indicação</h2>
+        <p className="mt-4 text-neutral-200">
+          Indicou alguém e a pessoa assinou? Você ganha 1 mês grátis no sistema.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="teste" className="mx-auto max-w-5xl px-6 py-16 text-center lg:px-8 lg:py-24">
+    <div className="rounded-[32px] border border-orange-400/20 bg-gradient-to-br from-orange-500/20 via-neutral-900 to-black p-8 shadow-2xl shadow-orange-500/10 sm:p-12">
+      <p className="text-sm font-semibold uppercase tracking-[0.25em] text-orange-300">Comece agora</p>
+      <h2 className="mt-4 text-3xl font-black sm:text-5xl">Peça seu teste grátis agora mesmo</h2>
+      <p className="mx-auto mt-4 max-w-2xl text-neutral-300">
+        Entre em contato e descubra como ter acesso à Cyber TV BR com rapidez, praticidade e muito entretenimento.
+      </p>
+      <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+        <a
+          href="https://wa.me/5588988761380"
+          className="rounded-2xl bg-orange-500 px-8 py-4 font-bold text-black transition hover:scale-[1.02]"
+        >
+          Falar no WhatsApp
+        </a>
+        <a
+          href="#topo"
+          className="rounded-2xl border border-white/15 bg-white/5 px-8 py-4 font-bold transition hover:bg-white/10"
+        >
+          Voltar ao topo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer className="border-t border-white/10 px-6 py-8 text-center text-sm text-neutral-400">
+    © 2026 Cyber TV BR — Todos os direitos reservados.
+  </footer>
+</div>
+
+); }
