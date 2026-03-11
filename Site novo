@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyber TV BR</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0b0b0f;
+      color: white;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      background: radial-gradient(circle at top, rgba(255,140,0,0.25), transparent 40%), #0b0b0f;
+    }
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(255,140,0,0.15);
+      color: #ff9d2f;
+      border: 1px solid rgba(255,140,0,0.3);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 56px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: #ff8c00;
+    }
+
+    p {
+      font-size: 18px;
+      color: #d0d0d0;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 24px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #ff8c00;
+      color: black;
+    }
+
+    .btn-primary:hover {
+      background: #ffa733;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.15);
+      color: white;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .stats {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .stat h3 {
+      color: #ff8c00;
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .mockup {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,140,0,0.2);
+      border-radius: 28px;
+      padding: 20px;
+      box-shadow: 0 10px 40px rgba(255,140,0,0.08);
+    }
+
+    .screen {
+      background: #121218;
+      border-radius: 24px;
+      padding: 20px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .live {
+      display: inline-block;
+      background: #ff8c00;
+      color: black;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .menu div {
+      background: #1b1b24;
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 12px;
+      border-radius: 14px;
+      text-align: center;
+      color: #eee;
+      font-size: 14px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .card {
+      height: 150px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(255,140,0,0.6), rgba(255,140,0,0.08), #1a1a22);
+      display: flex;
+      align-items: end;
+      padding: 12px;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 70px 20px;
+    }
+
+    .section .wrap {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .title-center {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .title-center h2 {
+      font-size: 40px;
+      margin-top: 10px;
+    }
+
+    .title-center small {
+      color: #ff8c00;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .benefit {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 25px;
+    }
+
+    .benefit h3 {
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, rgba(255,140,0,0.15), rgba(255,255,255,0.03));
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .highlight-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 70px 20px;
+    }
+
+    .highlight-box {
+      background: #121218;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 28px;
+      padding: 30px;
+    }
+
+    .highlight-box.orange {
+      background: linear-gradient(135deg, rgba(255,140,0,0.18), #121218);
+      border: 1px solid rgba(255,140,0,0.2);
+    }
+
+    .highlight-box small {
+      color: #ff9d2f;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .highlight-box h2 {
+      margin: 15px 0;
+      font-size: 34px;
+    }
+
+    .cta {
+      padding: 70px 20px;
+    }
+
+    .cta-box {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      border-radius: 30px;
+      padding: 50px 30px;
+      background: linear-gradient(135deg, rgba(255,140,0,0.2), #0f0f14);
+      border: 1px solid rgba(255,140,0,0.18);
+    }
+
+    .cta-box small {
+      color: #ff9d2f;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .cta-box h2 {
+      font-size: 42px;
+      margin: 15px 0;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+      padding: 25px;
+      color: #aaa;
+    }
+
+    @media (max-width: 900px) {
+      .container,
+      .benefits,
+      .highlight-grid,
+      .cards,
+      .menu,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .benefits {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="container">
+      <div>
+        <div class="tag">Streaming sem limites</div>
+        <h1>Cyber <span>TV BR</span></h1>
+        <p>Todos os canais, filmes e séries em um só lugar. Experimente uma plataforma moderna, rápida e feita para quem quer entretenimento completo.</p>
+
+        <div class="buttons">
+          <a class="btn btn-primary" href="https://wa.me/5588988761380">Teste grátis 3 horas</a>
+          <a class="btn btn-secondary" href="#beneficios">Ver benefícios</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <h3>24h</h3>
+            <span>Conteúdo disponível</span>
+          </div>
+          <div class="stat">
+            <h3>3h</h3>
+            <span>Teste grátis</span>
+          </div>
+          <div class="stat">
+            <h3>1 mês</h3>
+            <span>Por indicação</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mockup">
+        <div class="screen">
+          <div class="live">AO VIVO</div>
+          <div class="menu">
+            <div>TV ao Vivo</div>
+            <div>Filmes</div>
+            <div>Séries</div>
+            <div>Infantil</div>
+            <div>Esportes</div>
+            <div>Novelas</div>
+          </div>
+          <div class="cards">
+            <div class="card">Destaque 1</div>
+            <div class="card">Destaque 2</div>
+            <div class="card">Destaque 3</div>
+            <div class="card">Destaque 4</div>
+            <div class="card">Destaque 5</div>
+            <div class="card">Destaque 6</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="beneficios">
+    <div class="wrap">
+      <div class="title-center">
+        <small>Benefícios</small>
+        <h2>Tudo o que você precisa em um só lugar</h2>
+      </div>
+
+      <div class="benefits">
+        <div class="benefit">
+          <h3>Todos os canais</h3>
+          <p>Acesse uma programação completa com muito mais praticidade.</p>
+        </div>
+        <div class="benefit">
+          <h3>Filmes e séries</h3>
+          <p>Encontre entretenimento para toda a família em um só sistema.</p>
+        </div>
+        <div class="benefit">
+          <h3>Compatível com vários dispositivos</h3>
+          <p>Use na Smart TV, celular, tablet e outros aparelhos.</p>
+        </div>
+        <div class="benefit">
+          <h3>Interface moderna</h3>
+          <p>Navegação rápida, simples e intuitiva para assistir sem complicação.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlight">
+    <div class="highlight-grid">
+      <div class="highlight-box">
+        <small>Teste grátis</small>
+        <h2>Experimente por 3 horas</h2>
+        <p>Conheça a plataforma antes de assinar. Veja a qualidade, a navegação e tudo o que a Cyber TV BR oferece.</p>
+      </div>
+
+      <div class="highlight-box orange">
+        <small>Indique e ganhe</small>
+        <h2>1 mês grátis por indicação</h2>
+        <p>Indicou alguém e a pessoa assinou? Você ganha 1 mês grátis no sistema.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-box">
+      <small>Comece agora</small>
+      <h2>Peça seu teste grátis agora mesmo</h2>
+      <p>Entre em contato e descubra como ter acesso à Cyber TV BR com rapidez, praticidade e muito entretenimento.</p>
+
+      <div class="buttons" style="justify-content:center; margin-top:30px;">
+        <a class="btn btn-primary" href="https://wa.me/5588988761380">Falar no WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Cyber TV BR — Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
